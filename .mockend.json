@@ -1,35 +1,65 @@
 {
-	"Post": {
-	  "cover": {
-		"regexp": "https://picsum\\.photos/seed/[0-9]{5}/1920/270"
-	  },
-	  "title": {
-		"loremWords": {
-		  "minLength": 5,
-		  "maxLength": 20
+	"Product": {
+		"name": {
+			"loremWords": {
+				"minLength": 1,
+				"maxLength": 4
+			}
+		},
+		"price": {
+			"int": {
+				"min": 1000,
+				"max": 100000
+			}
+		},
+		"discountPercent": {
+			"int": {
+				"min": 0,
+				"max": 50
+			}
+		},
+		"img": "/products/sneaker-6.png",
+		"sizes": {
+			"hasMany": "Size"
+		},
+		"category": {
+			"string": [
+				"men",
+				"women"
+			]
+		},
+		"rating": {
+			"int": {
+				"min": 0,
+				"max": 50
+			}
+		},
+		"tag": {
+			"string": [
+				"one",
+				"two",
+				"three"
+			]
+		},
+		"body": {
+			"loremParagraphs": {
+				"minLength": 10,
+				"maxLength": 100
+			}
+		},
+		"createdAt": {
+			"dateTime": {
+				"min": "2010-01-01T00:00:00Z",
+				"max": "2022-12-31T23:59:59Z"
+			}
 		}
-	  },
-	  "body": {
-		"loremParagraphs": {
-		  "minLength": 10,
-		  "maxLength": 100
+	},
+	"Size": {
+		"size": {
+			"int": {
+				"min": 34,
+				"max": 48
+			}
 		}
-	  },
-	  "tag": {
-		"string": [
-		  "one",
-		  "two",
-		  "three"
-		]
-	  },
-	  "isDraft": {
-		"boolean": {}
-	  },
-	  "createdAt": {
-		"dateTime": {
-		  "min": "2010-01-01T00:00:00Z",
-		  "max": "2020-12-31T23:59:59Z"
-		}
-	  }
 	}
-  }
+}
