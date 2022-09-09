@@ -1,10 +1,7 @@
 {
 	"Product": {
 		"name": {
-			"loremWords": {
-				"minLength": 1,
-				"maxLength": 4
-			}
+			"regexp": "[A-Z][a-z]{5,10} [a-z]{5,10}"
 		},
 		"price": {
 			"int": {
