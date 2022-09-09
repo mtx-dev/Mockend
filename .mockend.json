@@ -18,14 +18,25 @@
 				"max": 50
 			}
 		},
-		"img": "/products/sneaker-6.png",
+		"img": {
+			"string": [
+				"/products/sneaker-2.webp",
+				"/products/sneaker-3.webp",
+				"/products/sneaker-4.png",
+				"/products/sneaker-5.png",
+				"/products/sneaker-6.png",
+				"/products/sneaker-7.jpeg",
+				"/products/sneaker-8.jpeg"
+			]
+		},
 		"sizes": {
 			"hasMany": "Size"
 		},
 		"category": {
 			"string": [
 				"men",
-				"women"
+				"women",
+				"kids"
 			]
 		},
 		"rating": {
